@@ -15,21 +15,21 @@ export const metadata: Metadata = {
   description: "Rishav is a Full Stack Developer specializing in building impactful web applications from scratch. Explore his portfolio to see my projects and skills.",
   keywords: "Rishav, Full Stack Developer, Web Developer, Portfolio, JavaScript, TypeScript, React, Node.js, software engineer",
   authors: [{ name: "Rishav Raj" }],
-  openGraph: {
-    title: "Rishav",
-    description: "",
-    url: "https://fardeen.tech",
-    siteName: "fardeen",
-    images: [
-      {
-        url: "https://res.cloudinary.com/dl27j0qcm/image/upload/v1739721063/gradii-3840x2160_3_jqk2nt.png",
-        width: 400,
-        height: 200,
-        alt: "rishav",
-      },
-    ],
-    type: "website",
-  },
+  // openGraph: {
+  //   title: "Rishav",
+  //   description: "",
+  //   url: "https://fardeen.tech",
+  //   siteName: "fardeen",
+  //   images: [
+  //     {
+  //       url: "https://res.cloudinary.com/dl27j0qcm/image/upload/v1739721063/gradii-3840x2160_3_jqk2nt.png",
+  //       width: 400,
+  //       height: 200,
+  //       alt: "rishav",
+  //     },
+  //   ],
+  //   type: "website",
+  // },
   twitter: {
     card: 'summary_large_image',
     title: 'fardeen',
