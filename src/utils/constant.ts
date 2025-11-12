@@ -21,7 +21,7 @@ export const experienceData: I_Experience[] = [
         company_link: "https://x.com/fardeentwt",
         company_logo: "/freelance-icon.webp",
         company_name: "building visually stunning landing pages",
-        duration: "2024 - early 2025",
+        duration: "Jan 2025 - Oct 2025",
         job_title: "Freelance",
         description: ""
     },

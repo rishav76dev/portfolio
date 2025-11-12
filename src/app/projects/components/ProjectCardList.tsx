@@ -46,20 +46,19 @@ export default ProjectCardList;
 
 const data: Project[] = [
   {
-    logo: "/saloon-5.png",
+    logo: "/anon-ok.png",
     title: "Anonmily",
     description:
       "Anonmily is an anonymous messaging platform that lets users securely send and receive messages through unique, authenticated links.",
     techStack: [
-      "React",
-      "MUI",
+      "Next.js",
       "Tailwind CSS",
-      "Razorpay",
-      "Nodemailer",
-      "React Charts",
-      "Node.js",
-      "Express.js",
-      "MongoDB",
+      "Shadcn",
+      "Cookies",
+      "Tanstack Query",
+      "Prisma",
+      "Postgress",
+
     ],
     link: "https://anonmily.vercel.app/",
     source: "https://github.com/rishav76dev/anonmily",
@@ -71,10 +70,9 @@ const data: Project[] = [
     description:
       "An decentralized social media platfrom where user and creator earn incentive for browsing it.",
     techStack: [
-      "React",
+      "React Native",
       "Web3.js",
       "TypeScript",
-      "Recoil",
       "spl-token",
       "Tailwind CSS",
     ],
@@ -130,12 +128,10 @@ const data: Project[] = [
     description:
       "Store tweets, YouTube videos, and documents with rich previews. Filter, organize, and access your curated content with a clean, minimalist interface built for focus.",
     techStack: [
-      "Next.js",
+      "React",
       "TypeScript",
-      "Google Gemini",
-      "Prisma",
-      "PostgreSQL",
-      "NextAuth",
+      "MongoDb",
+      "Express",
       "Tailwind CSS",
     ],
     link: "https://secondbrains.vercel.app/",
