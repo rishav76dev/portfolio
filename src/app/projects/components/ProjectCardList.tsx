@@ -101,7 +101,7 @@ const data: Project[] = [
     logo: "/stealth-startup.jpeg",
     title: "Truly Coded",
     description:
-      "A premium B2B agency website built for Truly Coded, featuring a sophisticated design system, elegant typography, and lightning-fast performance. The site focuses on brand identity and web development for early-stage tech startups, optimized for accessibility and PWA support.",
+      "A premium B2B agency website built for Truly Coded, featuring a sophisticated design system, elegant typography, and lightning-fast performance. The site focuses on brand identity and web development for early-stage tech startups.",
     techStack: [
       "React",
       "TypeScript",
