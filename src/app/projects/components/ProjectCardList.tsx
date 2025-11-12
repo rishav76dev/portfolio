@@ -49,7 +49,7 @@ const data: Project[] = [
     logo: "/saloon-5.png",
     title: "Anonmily",
     description:
-      "Enrich Hair Salon is a salon booking system with online payments and an admin dashboard for managing services and bookings.",
+      "Anonmily is an anonymous messaging platform that lets users securely send and receive messages through unique, authenticated links.",
     techStack: [
       "React",
       "MUI",
@@ -97,24 +97,25 @@ const data: Project[] = [
     link: "https://www.voix.buzz/",
     source: "https://github.com/adisehrawat/VOIX",
   },
-  // {
-  //   logo: "/anon-4.png",
-  //   title: "GhostGram - SaaS platform",
-  //   description:
-  //     "GhostGram is an anonymous messaging platform that lets users securely send and receive messages through unique, authenticated links.",
-  //   techStack: [
-  //     "Next.js",
-  //     "Typescript",
-  //     "Gemini",
-  //     "MongoDB",
-  //     "NextAuth",
-  //     "Nodemailer",
-  //     "Tailwind CSS",
-  //     "Shadcn",
-  //   ],
-  //   link: "https://ghostgram.fardeen.tech",
-  //   source: "https://github.com/Fardeen26/ghostgram",
-  // },
+  {
+    logo: "/stealth-startup.jpeg",
+    title: "Truly Coded",
+    description:
+      "A premium B2B agency website built for Truly Coded, featuring a sophisticated design system, elegant typography, and lightning-fast performance. The site focuses on brand identity and web development for early-stage tech startups, optimized for accessibility and PWA support.",
+    techStack: [
+      "React",
+      "TypeScript",
+      "Vite",
+      "Tailwind CSS",
+      "shadcn/ui",
+      "Framer Motion",
+      "React Query",
+      "PWA",
+    ],
+    link: "https://truely-coded.vercel.app",
+    source: "https://github.com/rishav76dev/TruelyCoded",
+  },
+
   // {
   //   logo: "/chat-icon.png",
   //   title: "The Chat Haven",
