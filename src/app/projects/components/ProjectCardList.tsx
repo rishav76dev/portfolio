@@ -64,23 +64,7 @@ const data: Project[] = [
     link: "https://anonmily.vercel.app/",
     source: "https://github.com/rishav76dev/anonmily",
   },
-  {
-    logo: "/flick-ai.png",
-    title: "Second-Brains",
-    description:
-      "Store tweets, YouTube videos, and documents with rich previews. Filter, organize, and access your curated content with a clean, minimalist interface built for focus.",
-    techStack: [
-      "Next.js",
-      "TypeScript",
-      "Google Gemini",
-      "Prisma",
-      "PostgreSQL",
-      "NextAuth",
-      "Tailwind CSS",
-    ],
-    link: "https://secondbrains.vercel.app/",
-    source: "https://github.com/rishav76dev/brains",
-  },
+
   {
     logo: "/token-2.png",
     title: "Voix",
@@ -101,7 +85,7 @@ const data: Project[] = [
     logo: "/stealth-startup.jpeg",
     title: "Truly Coded",
     description:
-      "A premium B2B agency website built for Truly Coded, featuring a sophisticated design system, elegant typography, and lightning-fast performance. The site focuses on brand identity and web development for early-stage tech startups.",
+      "A premium B2B agency website built for Truly Coded, featuring a sophisticated design system, elegant typography, and lightning-fast performance. ",
     techStack: [
       "React",
       "TypeScript",
@@ -131,24 +115,32 @@ const data: Project[] = [
   //   link: "https://chathaven.fardeen.tech",
   //   source: "https://github.com/Fardeen26/chat-app",
   // },
-  // {
-  //   logo: "/book-1.png",
-  //   title: "Lexicon",
-  //   description:
-  //     "Lexicon is a platform for discovering, downloading, and uploading books with a clean, user-friendly interface, working on auth and review functionality.",
-  //   techStack: [
-  //     "Next.js",
-  //     "Typescript",
-  //     "NextAuth",
-  //     "framer-motion",
-  //     "MongoDB",
-  //     "Tailwind CSS",
-  //     "Shadcn",
-  //     "Zod",
-  //   ],
-  //   link: "https://lexicon.fardeen.tech",
-  //   source: "https://github.com/Fardeen26/lexicon",
-  // },
+  {
+    logo: "/book-1.png",
+    title: "Attendance Viewer",
+    description:
+      "This project is a web-based attendance viewer designed for KIET college. It has 1500 unique users and 21000+ montly page visits",
+    techStack: ["Next.js", "Typescript", "TailwindCss"],
+    link: "cybervidya.pages.dev/",
+    source: "https://github.com/AmanDevelops/attendance-kiet",
+  },
+  {
+    logo: "/flick-ai.png",
+    title: "Second-Brains",
+    description:
+      "Store tweets, YouTube videos, and documents with rich previews. Filter, organize, and access your curated content with a clean, minimalist interface built for focus.",
+    techStack: [
+      "Next.js",
+      "TypeScript",
+      "Google Gemini",
+      "Prisma",
+      "PostgreSQL",
+      "NextAuth",
+      "Tailwind CSS",
+    ],
+    link: "https://secondbrains.vercel.app/",
+    source: "https://github.com/rishav76dev/brains",
+  },
   // {
   //   logo: "/credit-buddy.svg",
   //   title: "Credit Buddy",
@@ -191,6 +183,16 @@ const data: Project[] = [
   //   link: "https://malfoy.fardeen.tech",
   //   source: "https://github.com/Fardeen26/malfoy",
   // },
+  {
+    logo: "/malfoy.png",
+    title: "Pathway — Productivity SaaS App",
+    description:
+      "A modern SaaS platform designed to boost productivity by helping users track progress, manage projects, and celebrate milestones. Features include intuitive task tracking, team collaboration tools, tiered pricing plans, and real-time testimonials built with a focus on usability, motivation, and design excellence.",
+    techStack: ["React", "TypeScript", "Next", "Tailwind CSS", "Framer Motion"],
+    link: "https://saas-landing-page-rishavdev.vercel.app/",
+    source: "https://github.com/rishav76dev/landing-page",
+  },
+
   // {
   //   logo: "/top-50.png",
   //   title: "Life50",
