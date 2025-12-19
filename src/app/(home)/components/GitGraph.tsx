@@ -1,8 +1,13 @@
+'use client'
+
 import Title from "@/components/ui/Title";
 import Link from "next/link";
 import GitHubCalendar from 'react-github-calendar';
+import { useDarkMode } from "@/hooks/useDarkMode";
 
 export default function GitGraph() {
+    const { isDarkMode } = useDarkMode();
+    
     return (
         <div className="w-full flex flex-col items-center mt-8 mb-4 gap-4 max-sm:hidden">
             <Title title="GitHub Contributions" />
@@ -11,10 +16,7 @@ export default function GitGraph() {
                     username="rishav76dev"
                     blockSize={10}
                     blockMargin={3}
-                    theme={{
-                        light: ["#1e1e2f", "#5a3e7a", "#7e5aa2", "#a87cc3", "#d9a9e6"],
-                        dark: ["#1e1e2f", "#5a3e7a", "#7e5aa2", "#a87cc3", "#d9a9e6"]
-                    }}
+                    colorScheme={isDarkMode ? 'dark' : 'light'}
                 />
             </Link>
         </div>

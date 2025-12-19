@@ -18,7 +18,7 @@ export const experienceData: I_Experience[] = [
     //     description: ""
     // },
     {
-        company_link: "https://x.com/fardeentwt",
+        company_link: "https://x.com/rjrishav76",
         company_logo: "/freelance-icon.webp",
         company_name: "building visually stunning landing pages",
         duration: "Jan 2025 - Oct 2025",
@@ -37,8 +37,6 @@ export const experienceData: I_Experience[] = [
 
 export const educationData: I_Education[] = [
     {
-        // institute_link: "https://www.uok.ac.in/",
-        // institute_logo: "/uok.gif",
         course_title: "Bachelors of Technology",
         ending_date: " sep 2025",
         institute_name: "KIET Group of Institutions",
