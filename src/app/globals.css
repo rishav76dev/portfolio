@@ -73,3 +73,9 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+@layer utilities {
+  .bg-theme-main {
+    @apply bg-[#ECECEC] dark:bg-black;
+  }
+}

@@ -46,7 +46,7 @@ export default function RootLayout({
     <html lang="en">
       <Provider>
         <DarkModeProvider>
-          <body className={`bg-white dark:bg-black`}>
+          <body className={`bg-theme-main`}>
             <Toaster position="bottom-right" />
             <Theme className="dark:!bg-black">
               <Navbar />
