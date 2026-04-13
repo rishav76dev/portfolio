@@ -4,8 +4,8 @@ import { Project } from '@/types/project';
 import ProjectCard from './ProjectCard';
 import { useState } from 'react';
 import { ChevronDownIcon } from '@radix-ui/react-icons';
-import { Badge } from '@radix-ui/themes';
 import { bricolage_grotesque } from '@/utils/fonts';
+import { Button } from '@/components/ui/button';
 
 
 const ProjectCardList = () => {
@@ -31,12 +31,17 @@ const ProjectCardList = () => {
         ))}
       </div>
       {visibleProjects < data.length && (
-        <Badge color="gray" variant="solid" highContrast onClick={loadMoreProjects} className={`text-xs max-sm:text-[10px] flex items-center text-center dark:hover:bg-gray-300 py-1 px-2 cursor-pointer hover:bg-gray-800 mt-6 ${bricolage_grotesque}`}>
+        <Button
+          variant="default"
+          size="sm"
+          onClick={loadMoreProjects}
+          className={`mt-6 h-8 text-xs max-sm:text-[10px] ${bricolage_grotesque}`}
+        >
           <span>Load More</span>
           <span className='!ml-[-3px] mt-[1px]'>
-            <ChevronDownIcon className='h-3 w-3 dark:!text-black !text-white  shrink-0 text-muted-foreground transition-transform duration-200' />
+            <ChevronDownIcon className='h-3 w-3 shrink-0 text-current transition-transform duration-200' />
           </span>
-        </Badge>
+        </Button>
       )}
     </div>
   )
@@ -110,7 +115,7 @@ const data: Project[] = [
     logo: "/flick-ai.png",
     title: "Second-Brains",
     description:
-      "Store tweets, YouTube videos, and documents with rich previews. Filter, organize, and access your curated content with a clean, minimalist interface built for focus.",
+      "Store tweets, YouTube videos, and documents with rich previews. ",
     techStack: [
       "React",
       "TypeScript",
@@ -123,9 +128,9 @@ const data: Project[] = [
   },
   {
     logo: "/malfoy.png",
-    title: "Pathway — Productivity SaaS App",
+    title: "Productivity SaaS App",
     description:
-      "A modern SaaS platform designed to boost productivity by helping users track progress, manage projects, and celebrate milestones. Features include intuitive task tracking, team collaboration tools, tiered pricing plans, and real-time testimonials built with a focus on usability, motivation, and design excellence.",
+      "A modern SaaS platform designed to boost productivity by helping users track progres.",
     techStack: ["React", "TypeScript", "Next", "Tailwind CSS", "Framer Motion"],
     link: "https://saas-landing-page-rishavdev.vercel.app/",
     source: "https://github.com/rishav76dev/landing-page",

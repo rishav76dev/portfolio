@@ -5,6 +5,7 @@ import ShineBorder from "@/components/ui/shine-border";
 import { useDarkMode } from "@/hooks/useDarkMode";
 import { Project } from "@/types/project";
 import { bricolage_grotesque, inter } from "@/utils/fonts";
+import { Button } from "@/components/ui/button";
 import { GitHubLogoIcon, GlobeIcon } from "@radix-ui/react-icons";
 import { Badge, Link } from "@radix-ui/themes";
 import Image from "next/image";
@@ -42,7 +43,7 @@ const ProjectCard = (props: Project) => {
               {props.title}
             </h1>
           </Link>
-          <p className={`mt-2 text-sm dark:text-[#D1D5DB] ${inter}`}>
+          <p className={`mt-2 text-sm md:text-[16px] text-neutral-600 ${inter}`}>
             {props.description}
           </p>
         </div>
@@ -65,29 +66,19 @@ const ProjectCard = (props: Project) => {
           }`}
         >
           {props.link && (
-            <Link href={props.link} target="_blank">
-              <Badge
-                color="gray"
-                variant="solid"
-                highContrast
-                className={`text-[10px] py-[3px] dark:hover:bg-gray-300 ${bricolage_grotesque}`}
-              >
+            <Button asChild variant="default" size="sm" className={`h-8 px-3 text-[10px] ${bricolage_grotesque}`}>
+              <Link href={props.link} target="_blank" underline="none">
                 <GlobeIcon width={11} height={11} /> Website
-              </Badge>
-            </Link>
+              </Link>
+            </Button>
           )}
 
           {props.source && (
-            <Link href={props.source} target="_blank">
-              <Badge
-                color="gray"
-                variant="solid"
-                highContrast
-                className={`text-[10px] py-[3px] dark:hover:bg-gray-300 ${bricolage_grotesque}`}
-              >
+            <Button asChild variant="default" size="sm" className={`h-8 px-3 text-[10px] ${bricolage_grotesque}`}>
+              <Link href={props.source} target="_blank" underline="none">
                 <GitHubLogoIcon width={11} height={11} /> Source
-              </Badge>
-            </Link>
+              </Link>
+            </Button>
           )}
         </div>
       </ShineBorder>

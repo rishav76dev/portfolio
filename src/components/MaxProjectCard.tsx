@@ -6,6 +6,7 @@ import Image from 'next/image';
 import { GitHubLogoIcon, GlobeIcon } from '@radix-ui/react-icons';
 import { Project } from '@/types/project';
 import { useDarkMode } from '@/hooks/useDarkMode';
+import { Button } from './ui/button';
 
 const MaxProjectCard = () => {
     const { isDarkMode } = useDarkMode()
@@ -26,7 +27,7 @@ const MaxProjectCard = () => {
                                     <Link href={project.link ? project.link : project.source} target='_blank' underline='none'>
                                         <h1 className={`text-xl max-lg:text-lg text-black dark:text-white font-bold tracking-tight text-start ${bricolage_grotesque}`}>{project.title}</h1>
                                     </Link>
-                                    <p className={`mt-1 text-sm dark:text-[#D1D5DB] ${inter}`}>{project.description}</p>
+                                    <p className={`mt-1 text-sm md:text-[16px] text-neutral-600 ${inter}`}>{project.description}</p>
                                 </div>
 
                                 <div className="flex gap-1 mt-3 flex-wrap !pointer-events-auto">
@@ -41,19 +42,19 @@ const MaxProjectCard = () => {
                                 <div className='mt-3 !pointer-events-auto flex gap-1'>
                                     {
                                         project.link && (
-                                            <Link href={project.link} target='_blank'>
-                                                <Badge color="gray" variant="solid" highContrast className={`text-[10px] py-[3px] dark:hover:bg-gray-300 ${bricolage_grotesque}`}>
+                                            <Button asChild variant="default" size="sm" className={`h-8 px-3 text-[10px] ${bricolage_grotesque}`}>
+                                                <Link href={project.link} target='_blank' underline='none'>
                                                     <GlobeIcon width={11} height={11} /> Website
-                                                </Badge>
-                                            </Link>
+                                                </Link>
+                                            </Button>
                                         )
                                     }
 
-                                    <Link href={project.source} target='_blank'>
-                                        <Badge color="gray" variant="solid" highContrast className={`text-[10px] py-[3px] dark:hover:bg-gray-300 ${bricolage_grotesque}`}>
+                                    <Button asChild variant="default" size="sm" className={`h-8 px-3 text-[10px] ${bricolage_grotesque}`}>
+                                        <Link href={project.source} target='_blank' underline='none'>
                                             <GitHubLogoIcon width={11} height={11} /> Source
-                                        </Badge>
-                                    </Link>
+                                        </Link>
+                                    </Button>
                                 </div>
                             </div>
                         </ShineBorder>

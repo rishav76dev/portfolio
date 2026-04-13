@@ -1,9 +1,10 @@
 "use client"
 
-import { Badge, Tooltip } from '@radix-ui/themes'
+import { Tooltip } from '@radix-ui/themes'
 import React from 'react'
 import { bricolage_grotesque } from '@/utils/fonts'
 import Title from './ui/Title'
+import { Button } from './ui/button'
 
 const Skills = () => {
   return (
@@ -14,9 +15,13 @@ const Skills = () => {
         {
           data.map((skill, idx) => (
             <Tooltip key={idx} content={skill}>
-              <Badge color="gray" variant="solid" highContrast className={`text-xs max-sm:text-[10px] dark:hover:bg-gray-300 py-1 px-2 cursor-pointer hover:bg-gray-800 ${bricolage_grotesque}`}>
+              <Button
+                variant="outline"
+                size="sm"
+                className={`h-auto py-1 px-2 text-xs max-sm:text-[10px] ${bricolage_grotesque}`}
+              >
                 {skill}
-              </Badge>
+              </Button>
             </Tooltip>
           ))
         }
