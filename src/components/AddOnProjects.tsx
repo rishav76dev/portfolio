@@ -8,9 +8,11 @@ const AddOnProjects = () => {
         {data.map((project: Project, idx: number) => (
           <ProjectCard
             key={idx}
+            logo={project.logo}
             title={project.title}
             description={project.description}
             techStack={project.techStack}
+            link={project.link}
             source={project.source}
           />
         ))}
@@ -22,6 +24,15 @@ const AddOnProjects = () => {
 export default AddOnProjects;
 
 const data: Project[] = [
+  {
+    logo: "/mathsblitz-logo.png",
+    title: "MathsBlitz",
+    description:
+      "Real-time 2-player arithmetic duels with native CELO wagering on the Celo blockchain. Connect a MiniPay wallet, pick a wager tier, and race to answer maths questions — winner takes 95% of the pot.",
+    techStack: [],
+    source: "https://github.com/rishav76dev/MathsBlitz",
+    link: "https://maths-blitz.vercel.app/",
+  },
   {
     title: "Automated Market Maker",
     description:

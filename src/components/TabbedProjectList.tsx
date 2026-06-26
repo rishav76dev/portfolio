@@ -21,7 +21,7 @@ const TabbedProjectList = () => {
               value="web3"
               className="text-xs sm:text-sm data-[state=active]:bg-white/20"
             >
-              Solana Smart Contract
+              Web 3
             </TabsTrigger>
           </TabsList>
         </div>

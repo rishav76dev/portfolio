@@ -46,9 +46,9 @@ const Experience = () => {
                                         </div>
 
                                         <AccordionPrimitive.Content className="overflow-hidden data-[state=closed]:animate-accordion-up data-[state=open]:animate-accordion-down">
-                                            <ul className={`mt-2 text-sm max-sm:text-[11px] list-disc pl-4 space-y-1.5 pb-1 ${inter}`}>
+                                            <ul className={`mt-2 text-sm max-sm:text-[11px] list-disc pl-4 divide-y divide-neutral-200 dark:divide-neutral-800 pb-1 ${inter}`}>
                                                 {exp.bullets.map((point, i) => (
-                                                    <li key={i}>
+                                                    <li key={i} className="text-neutral-600 dark:text-neutral-400 py-1.5">
                                                         {typeof point === 'string' ? point : (point as BulletSegment[]).map((seg, j) =>
                                                             seg.href ? (
                                                                 <a key={j} href={seg.href} target="_blank" rel="noreferrer" className="font-bold underline underline-offset-2 text-inherit hover:opacity-70 transition-opacity">

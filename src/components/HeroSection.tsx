@@ -7,7 +7,7 @@ import { Button } from "./ui/button";
 export default function HeroSection() {
   return (
     <div className="w-full flex justify-center py-5 pt-36 dark:bg-black">
-      <div className="w-2/3 max-sm:w-full px-4">
+      <div className="w-1/2 max-sm:w-full px-4">
         <div className="flex flex-col items-start justify-start gap-5 md:flex-row md:items-center md:justify-between ">
           {/* Text Content */}
           <div>

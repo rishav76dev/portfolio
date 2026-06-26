@@ -50,7 +50,43 @@ const ProjectCardList = () => {
 export default ProjectCardList;
 
 const data: Project[] = [
+ 
   {
+    title: "Rate Limiter",
+    description:
+      "Cloudflare-inspired rate limiter with sliding window algorithm, async background processing, and Redis-backed distributed state. Handles 400K+ req/s with 0% false positives.",
+    techStack: [
+      "TypeScript",
+      "Bun",
+      "Express",
+      "Redis",
+    ],
+    source: "https://github.com/rishav76dev/RateLimiter",
+  },
+  {
+    title: "Load Balancer",
+    description:
+      "Layer 7 HTTP Load Balancer built from scratch with round-robin routing, parallel health checks, automatic failover, and clean strategy-pattern architecture.",
+    techStack: [
+      "TypeScript",
+      "Bun",
+      "Express",
+    ],
+    source: "https://github.com/rishav76dev/LoadBalancer",
+  },
+   {
+    logo: "/aurelius-logo.png",
+    title: "Aurelius",
+    description:
+      "A B2B marketing agency website for Aurelius Global Marketing LLC, serving engineering consultancies across Oil & Gas, Semiconductors, Pharma, and Renewables sectors.",
+    techStack: [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+    ],
+    link: "https://aurelius-nu.vercel.app/",
+  },
+    {
     logo: "/anon-ok.png",
     title: "Anonmily",
     description:
@@ -68,27 +104,11 @@ const data: Project[] = [
     link: "https://anonmily.vercel.app/",
     source: "https://github.com/rishav76dev/anonmily",
   },
-
   {
-    logo: "/token-2.png",
-    title: "Voix",
+    logo: "/azlyntech-logo.png",
+    title: "Azlyn Tech",
     description:
-      "An decentralized social media platfrom where user and creator earn incentive for browsing it.",
-    techStack: [
-      "React Native",
-      "Web3.js",
-      "TypeScript",
-      "spl-token",
-      "Tailwind CSS",
-    ],
-    link: "https://www.voix.buzz/",
-    source: "https://github.com/adisehrawat/VOIX",
-  },
-  {
-    logo: "/stealth-startup.jpeg",
-    title: "Truly Coded",
-    description:
-      "A premium B2B agency website built for Truly Coded, featuring a sophisticated design system, elegant typography, and lightning-fast performance. ",
+      "A modern B2B tech agency website for Azlyn Tech, featuring a clean design system, elegant typography, and lightning-fast performance.",
     techStack: [
       "React",
       "TypeScript",
@@ -96,10 +116,8 @@ const data: Project[] = [
       "Tailwind CSS",
       "shadcn/ui",
       "Framer Motion",
-  
     ],
-    link: "https://truely-coded.vercel.app",
-    source: "https://github.com/rishav76dev/TruelyCoded",
+    link: "https://www.azlyntech.com/",
   },
 
   {
