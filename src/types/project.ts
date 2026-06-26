@@ -1,3 +1,10 @@
+import React from 'react';
+
+export interface TechItem {
+    name: string;
+    icon: React.ReactNode;
+}
+
 export type Project = {
     logo?: string,
     title: string,
@@ -31,7 +38,8 @@ export interface I_Experience {
     job_title: string,
     description: string,
     bullets?: (string | BulletSegment[])[],
-    projectLinks?: { label: string; href: string }[]
+    projectLinks?: { label: string; href: string }[],
+    techStack?: TechItem[]
 }
 
 export interface I_Coursework {

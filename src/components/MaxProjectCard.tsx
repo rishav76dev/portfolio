@@ -1,11 +1,35 @@
+'use client';
 import { MagicCard } from './ui/magic-card'
 import ShineBorder from './ui/shine-border';
 import { bricolage_grotesque, inter } from '@/utils/fonts';
-import { Badge, Link } from '@radix-ui/themes';
+import { Link } from '@radix-ui/themes';
 import Image from 'next/image';
 import { GitHubLogoIcon, GlobeIcon } from '@radix-ui/react-icons';
 import { Project } from '@/types/project';
 import { Button } from './ui/button';
+import {
+    SiNextdotjs, SiTypescript, SiPrisma, SiPostgresql,
+    SiCloudinary, SiTailwindcss, SiRadixui, SiZod, SiBun, SiFramer,
+} from 'react-icons/si';
+import React from 'react';
+
+// Map of tech name → { icon, color } for the animated badges
+const techIconMap: Record<string, { icon: React.ReactNode }> = {
+    "NextJS":          { icon: <SiNextdotjs /> },
+    "TypeScript":      { icon: <SiTypescript /> },
+    "Prisma":          { icon: <SiPrisma /> },
+    "PostgreSQL":      { icon: <SiPostgresql /> },
+    "NextAuth":        { icon: <SiNextdotjs /> },
+    "TipTap Editor":   { icon: <span style={{ fontSize: 14, fontWeight: 700, lineHeight: 1 }}>T</span> },
+    "Resend":          { icon: <span style={{ fontSize: 12, fontWeight: 700, lineHeight: 1 }}>R</span> },
+    "Cloudinary":      { icon: <SiCloudinary /> },
+    "Zod":             { icon: <SiZod /> },
+    "framer-motion":   { icon: <SiFramer /> },
+    "Radix UI":        { icon: <SiRadixui /> },
+    "Magic UI":        { icon: <span style={{ fontSize: 12, fontWeight: 700, lineHeight: 1 }}>✦</span> },
+    "Tailwind CSS":    { icon: <SiTailwindcss /> },
+    "Bun":             { icon: <SiBun /> },
+};
 
 const MaxProjectCard = () => {
     return (
@@ -28,13 +52,24 @@ const MaxProjectCard = () => {
                                     <p className={`mt-1 text-sm md:text-[16px] text-neutral-600 ${inter}`}>{project.description}</p>
                                 </div>
 
-                                <div className="flex gap-1 mt-3 flex-wrap !pointer-events-auto">
+                                <div className="flex gap-2 mt-3 flex-wrap !pointer-events-auto">
                                     {
-                                        project.techStack?.map((tech, idx) => (
-                                            <Badge key={idx} color="gray" variant="outline" highContrast className={`text-[10px] dark:hover:!bg-white hover:!bg-black hover:!text-white dark:hover:!text-black !pointer-events-auto ${bricolage_grotesque}`}>
-                                                {tech}
-                                            </Badge>
-                                        ))
+                                        project.techStack?.map((tech, idx) => {
+                                            const mapped = techIconMap[tech];
+                                            return (
+                                                <div
+                                                    key={idx}
+                                                    className={`group/badge relative inline-flex items-center justify-center size-8 rounded-md border border-zinc-400/60 dark:border-zinc-600 bg-zinc-200 dark:bg-zinc-800 transition-all duration-200 ease-out hover:scale-[1.08] hover:border-zinc-500 dark:hover:border-zinc-400 hover:bg-zinc-300 dark:hover:bg-zinc-700 hover:shadow-md cursor-default !pointer-events-auto ${bricolage_grotesque}`}
+                                                >
+                                                    <span className="flex items-center justify-center [&_svg]:w-4 [&_svg]:h-4 text-xs font-bold">
+                                                        {mapped ? mapped.icon : <span style={{ fontSize: 10, fontWeight: 700 }}>{tech[0]}</span>}
+                                                    </span>
+                                                    <span className="pointer-events-none absolute -top-7 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-md bg-zinc-800 dark:bg-zinc-100 text-zinc-100 dark:text-zinc-800 text-[10px] font-medium px-1.5 py-0.5 opacity-0 scale-95 transition-all duration-200 ease-out group-hover/badge:opacity-100 group-hover/badge:scale-100 z-10">
+                                                        {tech}
+                                                    </span>
+                                                </div>
+                                            );
+                                        })
                                     }
                                 </div>
                                 <div className='mt-3 !pointer-events-auto flex gap-1'>
