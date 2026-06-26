@@ -79,3 +79,29 @@ body {
     @apply bg-[#ECECEC];
   }
 }
+
+/* Horizontal beam: travels left→right in first 43% of cycle, then hides */
+@keyframes beam-travel-h {
+  0%    { transform: translateX(-320px); opacity: 1; }
+  43%   { transform: translateX(calc(100% + 320px)); opacity: 1; }
+  43.01%{ opacity: 0; transform: translateX(-320px); }
+  100%  { opacity: 0; transform: translateX(-320px); }
+}
+
+/* Vertical beam: hides first 43%, then travels top→down from 43%→95% */
+@keyframes beam-travel-v {
+  0%    { transform: translateY(-160px); opacity: 0; }
+  43%   { transform: translateY(-160px); opacity: 0; }
+  43.01%{ transform: translateY(-160px); opacity: 1; }
+  95%   { transform: translateY(calc(100% + 160px)); opacity: 1; }
+  95.01%{ opacity: 0; transform: translateY(-160px); }
+  100%  { opacity: 0; transform: translateY(-160px); }
+}
+
+.animate-beam {
+  animation: beam-travel-h 3s linear infinite;
+}
+
+.animate-beam-v {
+  animation: beam-travel-v 3s linear infinite;
+}

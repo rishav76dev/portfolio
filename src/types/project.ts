@@ -21,13 +21,17 @@ export interface I_Education {
     description?: string
 }
 
+export type BulletSegment = { text: string; href?: string; bold?: boolean }
+
 export interface I_Experience {
     company_link: string,
     company_logo: string,
     company_name: string,
     duration: string,
     job_title: string,
-    description: string
+    description: string,
+    bullets?: (string | BulletSegment[])[],
+    projectLinks?: { label: string; href: string }[]
 }
 
 export interface I_Coursework {
