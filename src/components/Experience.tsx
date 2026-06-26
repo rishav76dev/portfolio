@@ -5,11 +5,9 @@ import { Link } from '@radix-ui/themes';
 import { I_Experience } from '@/types/project';
 import { bricolage_grotesque, inter } from '@/utils/fonts';
 import Title from './ui/Title';
-import { useDarkMode } from '@/hooks/useDarkMode';
 import { experienceData } from '@/utils/constant';
 
 const Experience = () => {
-    const { isDarkMode } = useDarkMode();
     return (
         <div className='w-1/2 max-lg:w-full max-lg:px-20 max-sm:w-full max-sm:px-5 flex flex-col items-center mt-4 pb-8'>
             <span className='mb-3'>
@@ -17,7 +15,7 @@ const Experience = () => {
             </span>
             {
                 experienceData.map((exp: I_Experience, idx) => (
-                    <MagicCard key={idx} className="cursor-pointer h-fit dark:shadow-2xl !bg-transparent border-none" gradientColor={`${isDarkMode ? '#262626' : 'rgba(197, 241, 241, 0.4)'}`}>
+                    <MagicCard key={idx} className="cursor-pointer h-fit dark:shadow-2xl !bg-transparent border-none" gradientColor="rgba(197, 241, 241, 0.4)">
                         <div className={`${exp.job_title === "Freelance" ? 'max-sm:ml-1 max-lg:ml-1' : ''} flex w-full px-5 max-sm:px-0 max-sm:pr-1 py-3`}>
                             <div className={`w-24 flex items-center justify-center max-sm:justify-start ${exp.company_logo === '/freelance-icon.webp' ? 'max-sm:!w-[79px]' : ''} ${exp.company_logo === '/stealth-startup.jpeg' ? 'max-sm:!w-[92px]' : ''}`}>
                                 <Link href={exp.company_link} target='_blank'>

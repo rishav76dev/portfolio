@@ -30,11 +30,6 @@ export interface I_Experience {
     description: string
 }
 
-export interface DarkModeContextType {
-    isDarkMode: boolean;
-    toggleDarkMode: () => void;
-}
-
 export interface I_Coursework {
     course_link: string,
     course_company_logo: string,

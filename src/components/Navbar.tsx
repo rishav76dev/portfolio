@@ -2,15 +2,13 @@
 
 import React from 'react';
 import { Separator, Tooltip } from '@radix-ui/themes';
-import { GitHubLogoIcon, SunIcon, MoonIcon,   LinkedInLogoIcon, CodeIcon, HomeIcon } from '@radix-ui/react-icons';
+import { GitHubLogoIcon, LinkedInLogoIcon, CodeIcon, HomeIcon } from '@radix-ui/react-icons';
 import { usePathname } from 'next/navigation';
 import { FaXTwitter } from 'react-icons/fa6';
-import { useDarkMode } from '@/hooks/useDarkMode';
 import Link from 'next/link';
 
 
 const Navbar = () => {
-    const { isDarkMode, toggleDarkMode } = useDarkMode();
     const pathname = usePathname();
 
     return (
@@ -31,7 +29,7 @@ const Navbar = () => {
               </Tooltip>
             </Link>
 
-            <Link href="/projects">
+            <Link href="/#projects">
               <Tooltip content="Projects">
                 <div className="hover:px-3 max-sm:hover:px-2 py-2.5 dark:hover:bg-[#262626] hover:bg-[#F4F4F5] rounded-full transition-all duration-300">
                   <CodeIcon
@@ -107,26 +105,8 @@ const Navbar = () => {
               </Tooltip>
             </Link>
 
-            <Separator
-              orientation="vertical"
-              size={{ sm: "1", lg: "2", xl: "2" }}
-              className="bg-black dark:bg-gray-400"
-            />
-
-            <div
-              className="hover:px-3 max-sm:hover:px-2 py-2.5 rounded-full transition-all duration-300 cursor-pointer"
-              onClick={toggleDarkMode}
-            >
-              <div className="flex items-center">
-                <button>
-                  {isDarkMode ? (
-                    <MoonIcon className="w-[18px] h-[18px] max-sm:w-[14px] max-sm:h-[14px]" />
-                  ) : (
-                    <SunIcon className="w-5 h-5 max-sm:w-[15px] max-sm:h-[15px]" />
-                  )}
-                </button>
-              </div>
-            </div>
+           
+           
           </div>
         </div>
       </nav>

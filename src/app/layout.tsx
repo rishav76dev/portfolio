@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Theme } from "@radix-ui/themes";
 import "@radix-ui/themes/styles.css";
 import Navbar from "@/components/Navbar";
-import DarkModeProvider from "@/context/DarkModeContext";
 import { Toaster } from "sonner";
 import { Analytics } from "@vercel/analytics/react";
 import "./globals.css";
@@ -45,7 +44,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <Provider>
-        <DarkModeProvider>
           <body className={`bg-theme-main`}>
             <Toaster position="bottom-right" />
             <Theme className="dark:!bg-black">
@@ -55,7 +53,6 @@ export default function RootLayout({
               <ConditionalFooter />
             </Theme>
           </body>
-        </DarkModeProvider>
       </Provider>
     </html>
   );

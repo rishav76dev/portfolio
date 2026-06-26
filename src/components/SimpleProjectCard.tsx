@@ -6,18 +6,14 @@ import { Link } from "@radix-ui/themes";
 import Image from "next/image";
 import { bricolage_grotesque, inter } from "@/utils/fonts";
 import { Project } from "@/types/project";
-import { useDarkMode } from "@/hooks/useDarkMode";
 
 const SimpleProjectCard = () => {
-  const { isDarkMode } = useDarkMode();
   return (
     <>
       {data.map((project, idx) => (
         <MagicCard
           key={idx}
-          gradientColor={`${
-            isDarkMode ? "#262626" : "rgba(197, 241, 241, 0.4)"
-          }`}
+          gradientColor="rgba(197, 241, 241, 0.4)"
           className="w-[68%] max-lg:w-[45%] max-sm:w-full flex justify-center max-lg:justify-start !bg-transparent cursor-pointer mt-5 rounded-lg dark:shadow-2xl"
         >
           <ShineBorder

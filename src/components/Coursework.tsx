@@ -6,7 +6,6 @@ import { Link } from '@radix-ui/themes';
 import { I_Coursework } from '@/types/project';
 import { inter, bricolage_grotesque } from '@/utils/fonts';
 import Title from './ui/Title';
-import { useDarkMode } from '@/hooks/useDarkMode';
 import {
     Accordion,
     AccordionContent,
@@ -16,14 +15,13 @@ import {
 
 
 const Coursework = () => {
-    const { isDarkMode } = useDarkMode()
     return (
         <div className='w-1/2 max-lg:w-full max-lg:px-20 max-sm:w-full max-sm:px-5 flex flex-col items-center mt-4 pb-8'>
             <Title title='Coursework' />
 
             <span className='mt-2'></span>
             {data.map((course, idx) => (
-                <MagicCard key={idx} className="cursor-pointer dark:shadow-2xl h-fit mt-2 !bg-transparent border-none" gradientColor={`${isDarkMode ? '#262626' : 'rgba(197, 241, 241, 0.4)'}`}>
+                <MagicCard key={idx} className="cursor-pointer dark:shadow-2xl h-fit mt-2 !bg-transparent border-none" gradientColor="rgba(197, 241, 241, 0.4)">
                     <div className="flex !justify-between w-[50vw] max-lg:w-full max-sm:w-full px-5 max-sm:px-0 py-3">
                         <div className="w-full flex">
                             <div className="w-24 h-12 flex justify-center">
